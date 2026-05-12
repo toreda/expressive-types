@@ -1,7 +1,7 @@
 /**
  *	MIT License
  *
- *	Copyright (c) 2019 - 2022 Toreda, Inc.
+ *	Copyright (c) 2019 - 2026 Toreda, Inc.
  *
  *	Permission is hereby granted, free of charge, to any person obtaining a copy
  *	of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@
 import gulp, {dest, series, src} from 'gulp';
 
 import {ESLint} from 'eslint';
-import del from 'del';
+import {deleteAsync} from 'del';
 import ts from 'gulp-typescript';
 
 const eslint = new ESLint({
@@ -55,7 +55,7 @@ function createDist() {
 async function cleanDist() {
 	// NOTE: In other projects this task is handled by `@toreda/build-tools`, however
 	// we cannot use it here because this package is a dependency of build-tools.
-	return del(`dist/**`, {
+	return deleteAsync(`dist/**`, {
 		force: true,
 		dryRun: false
 	});

@@ -1,21 +1,21 @@
 [![Toreda](https://content.toreda.com/logo/toreda-logo.png)](https://www.toreda.com)
 
-[![CI](https://img.shields.io/github/workflow/status/toreda/types/CI?style=for-the-badge)](https://github.com/toreda/types/actions) [![Coverage](https://img.shields.io/sonar/coverage/toreda_types?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)](https://sonarcloud.io/project/activity?graph=coverage&id=toreda_types) [![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/toreda_types?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)](https://sonarcloud.io/summary/new_code?id=toreda_types)
+[![CI](https://img.shields.io/github/workflow/status/toreda/expressive-types/CI?style=for-the-badge)](https://github.com/toreda/expressive-types/actions)
 
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/toreda/types/master?style=for-the-badge)](https://github.com/toreda/types/releases/latest) [![GitHub Release Date](https://img.shields.io/github/release-date/toreda/types?style=for-the-badge)](https://github.com/toreda/types/releases/latest) [![GitHub issues](https://img.shields.io/github/issues/toreda/types?style=for-the-badge)](https://github.com/toreda/types/issues)
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/toreda/expressive-types/master?style=for-the-badge)](https://github.com/toreda/expressive-types/releases/latest) [![GitHub Release Date](https://img.shields.io/github/release-date/toreda/expressive-types?style=for-the-badge)](https://github.com/toreda/expressive-types/releases/latest) [![GitHub issues](https://img.shields.io/github/issues/toreda/expressive-types?style=for-the-badge)](https://github.com/toreda/expressive-types/issues)
 
- [![license](https://img.shields.io/github/license/toreda/types?style=for-the-badge)](https://github.com/toreda/types/blob/master/LICENSE)
+ [![license](https://img.shields.io/github/license/toreda/expressive-types?style=for-the-badge)](https://github.com/toreda/expressive-types/blob/master/LICENSE)
 
 &nbsp;
 
-# `@toreda/types`
+# `@toreda/expressive-types`
 
 Improve readability, reduce redundancy. Functional &amp; Expressive Types used in [**Toreda**](https://www.toreda.com) packages.
 
 &nbsp;
 
 # **Contents**
-- [`@toreda/types`](#toredatypes)
+- [`@toreda/expressive-types`](#toredaexpressive-types)
 - [**Contents**](#contents)
 - [Object API](#object-api)
 	- [`Resettable`](#resettable)
@@ -53,7 +53,7 @@ Interface indicating implementer provides a `reset` method.
 
 ### Example
 ```typescript
-import type {Resettable} from '@toreda/types';
+import type {Resettable} from '@toreda/expressive-types';
 
 class MyObj implements Resettable {
 	public reset(): void {
@@ -70,7 +70,7 @@ Interface indicating implementer provides a `clear()` method. Callers expect `tr
 
 ### Example
 ```typescript
-import type {Clearable} from '@toreda/types';
+import type {Clearable} from '@toreda/expressive-types';
 
 class MyObj implements Clearable {
 	public clear(): boolean {
@@ -90,7 +90,7 @@ Interface indicating implementer provides a `toString()` method which returns th
 
 ### Example
 ```typescript
-import type {Stringable} from '@toreda/types';
+import type {Stringable} from '@toreda/expressive-types';
 
 class MyObj implements Stringable {
 	public a: string;
@@ -139,7 +139,7 @@ Implementer's type is any JavaScript primitive.
 
 ### Import
 ```typescript
-import {Primitive} from '@toreda/types'
+import {Primitive} from '@toreda/expressive-types'
 ```
 
 ### Use
@@ -153,7 +153,7 @@ Implementer's contents can be converted to a string by calling `toString()`.
 
 ### **Import**
 ```typescript
-import {Stringable} from '@toreda/types'
+import {Stringable} from '@toreda/expressive-types'
 ```
 
 ### **Use**
@@ -182,7 +182,7 @@ Express value intent &amp; purpose with type definitions.
 
 ### **Import**
 ```typescript
-import {BitMask} from '@toreda/types'
+import {BitMask} from '@toreda/expressive-types'
 ```
 
 ### **Use**
@@ -221,13 +221,13 @@ function validateId(id: BigId): void {
 
 ## Yarn
 ```bash
-$ yarn add @toreda/types --dev
+$ yarn add @toreda/expressive-types --dev
 ```
 
 
 ## NPM
 ```bash
-$ yarn add @toreda/types --D
+$ yarn add @toreda/expressive-types --D
 ```
 
 &nbsp;
@@ -238,7 +238,7 @@ $ yarn add @toreda/types --D
 
 
 ## Copyright
-Copyright &copy; 2019 - 2022 Toreda, Inc. All Rights Reserved.
+Copyright &copy; 2019 - 2026 Toreda, Inc. All Rights Reserved.
 
 
 ## Website

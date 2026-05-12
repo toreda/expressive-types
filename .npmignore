@@ -9,7 +9,6 @@ examples
 gulpfile.ts
 jest.config.js
 node_modules
-sonar-project.properties
 src/
 test-report.xml
 tests

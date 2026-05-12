@@ -1,94 +1,94 @@
-# [Unreleased]
+## [Unreleased]
 
-# [2.16.0] - 2023-02-14
+## [2.16.0] - 2023-02-14
 -   Moved all `Lifecycle` related files into new `@toreda/lifecycle` NPM package project. `@toreda/types` is intended to include expressive types with minimal or no functions that need to be included in the final build. The lifecycle functionality is useful and needs to be expanded, thus has its own package now.
 
-# [2.15.0] - 2022-09-04
+## [2.15.0] - 2022-09-04
 
 -   Added `lifecyclePhaseOption` helper function to check phase options in lifecycle phase handlers.
 -   Added `LifecyclePhaseOptions` with basic limit flags for recursive lifecycle phase handler invocation.
 -   Changed `LifecycleClientDelegate` and `LifecycleServerDelegate` to extend the newly addded `LifecycleParent` interface.
 -   Added `LifecycleParent` interface which makes an optional `children` property known to callers. `children` is a generic array of type `ValueT[]` whose type is defined by the caller. This property standardizes how child delegates are stored and used by `lifecyclePhase` to check for `children` during phase handling and recursively invoke their phase methods too.
 
-# [2.14.0] - 2022-05-20
+## [2.14.0] - 2022-05-20
 
-## Added
+### Added
 
 -   `LangCode` identifying localization language used in other localization systems.
 -   Entity Lifecycle types: `LifecycleEntity`, `LifecycleEntityData`, `LifecycleEntityDelegate`, and `LifecycleEntityPhase`.
 -   Addon Lifecycle types: `LifecycleAddon`, `LifecycleAddonData`, `LifecycleAddonDelegate`, and `LifecycleAddonPhase`.
 -   `cnxWillReconnect`, `cnxDidReconnect`, `cnxWillInit`, `cnxDidInit`, `cnxWillLoad`, and `cnxDidLoad` added connection lifecycle flow.
 
-# [2.13.1] - 2022-05-15
+## [2.13.1] - 2022-05-15
 
-## Fixed
+### Fixed
 
 -   Erroneous 'src/' prefix in `LifecycleNetworkCnxDelegate` removed and replace with correct relative path. Could break imports before fix.
 
-# [2.13.0] - 2022-05-12
+## [2.13.0] - 2022-05-12
 
-## Added
+### Added
 
 -   `LifecycleNetworkClient`.
 -   `LifecycleNetworkClientPhase` Type with phase keys for Network Clients.
 -   `LifecycleNetworkClientData` to track status flags for Network Client Phases.
 
-# [2.12.0] - 2022-05-08
+## [2.12.0] - 2022-05-08
 
-## Added
+### Added
 
 -   New types for various crypto coins & tokens.
 
-## Changed
+### Changed
 
 -   Most previous ticket symbol types split into two distinct types e.g. EthAddr & EthTokenAmt (example).
 
-# [2.11.0] - 2022-04-14
+## [2.11.0] - 2022-04-14
 
-## Dependencies
+### Dependencies
 
 -   Updated all dependencies to latest stable version available.
 -   Added yarn resolution for `chokidar` to use version `^3.0.0`.
 
-## Fixed
+### Fixed
 
 -   Added missing `type` qualifier to type only & interface only imports.
 
-## Lifecycle Types
+### Lifecycle Types
 
 -   Added `LifecycleClientData` interface returned by the `LifecycleClient` `toData()` call. This replaces a previously generic phase name -> boolean mapping..
 -   Added `LifecycleServerData` interface returned by the `LifecycleServer` `toData()` call. This replaces a previously generic phase name -> boolean mapping.
 
-# [2.10.1] - 2022-04-12
+## [2.10.1] - 2022-04-12
 
-## Fixed
+### Fixed
 
 -   `Iterable` incorrectly required `forEach: ArrayFunc<T, U>` which defines `forEach` as a single array function, when it should have defined `ArrayFunc` as the `fn` argument applied to each item in `forEach`.
 -   `Iterable` previously required three arguments `ItemT`, `ReturnT`, and `NextT`. The third argument `NextT` now defaults to `undefined` and is considered optional.
 
-# [2.10.0] - 2022-04-09
+## [2.10.0] - 2022-04-09
 
-## Added
+### Added
 
 -   `BaseObject` interface
 
-## Fixes & Updated
+### Fixes & Updated
 
 -   Added `minimist` and `marked` packages to yarn resolutions to resolve CVEs flagged by Github.
 -   Updated all dev dependencies to latest.
 -   Performed `yarn upgrade`.
 
-# [2.9.1] - 2022-04-06
+## [2.9.1] - 2022-04-06
 
-## New Types
+### New Types
 
 -   `Runnable<ArgT, ReturnT>` interface for classes which implement a runnable task interface.
 -   `RunnableTask<ArgT, ReturnT>` type signature for asynchronous functions invoked by `Runnable` classes.
 -   `RunnableTaskSync<ArgT, ReturnT>` type signature for synchronous functions invoked by `Runnable` classes. Prefer async tasks whenever possible.
 
-# [2.8.0] - 2022-02-22
+## [2.8.0] - 2022-02-22
 
-## New Types
+### New Types
 
 ### Cryptocurrency Units
 
@@ -252,17 +252,17 @@
 -   `PublicKey` to identify properties containing public key data, but does not describe algorithm, length, or other specific properties about the key.
 -   `PrivateKey` to identify properties containing private key data, but does not describe algorithm, length, or other specific properties about the key.
 
-# [2.7.0] - 2022-02-21
+## [2.7.0] - 2022-02-21
 
-## Added
+### Added
 
 -   `Serializable` for classes which need both `serialize()` and `toData()` function support.
 
 &nbsp;
 
-# [2.6.0] - 2022-01-02
+## [2.6.0] - 2022-01-02
 
-## Added
+### Added
 
 -   `LifecycleServerDelegate` for server-side classes using lifecycles.
 -   `LifecycleClientDelegate` for client-side classes using lifecycles.
@@ -276,41 +276,41 @@
 
 &nbsp;
 
-# [2.5.0] - 2021-11-18
+## [2.5.0] - 2021-11-18
 
-## Added
+### Added
 
 -   `IdFn` type that defines expected id properties as a string, helper function, or `Strong` type.
 -   `Cacheable` interface defining required properties for objects to be compatible with Toreda Cache classes.
 
 &nbsp;
 
-# [2.4.1] - 2021-11-08
+## [2.4.1] - 2021-11-08
 
-## Added
+### Added
 
 -   `Optional<T, K>` generic type which takes an interface `T` to make all properties optional except for one or more keys provided for `k`. For example: `Optional<MyInterface, 'one' | 'two'>` makes all properties on interface `MyInterface` optional except for keys which exactly match `one` or `two`.
 
-## Removed
+### Removed
 
 -   `gulp-eslint` package dependency.
 
 &nbsp;
 
-# [2.4.0]
+## [2.4.0]
 
 -   No changelog for release.
 
 &nbsp;
 
-# [2.0.0] - 2021-09-27
+## [2.0.0] - 2021-09-27
 
-## Changed
+### Changed
 
 -   `CanBeNullOrUndefined` is now `NullOrUndefined` and moved from `./src/aliases.ts` to `./src/null/or/undefined.ts`.
 -   `GuardedType` is now `Guarded` and moved from `./src/aliases.ts` to `./src/guarded.ts`.
 
-## Moved
+### Moved
 
 -   `ANY` from `./src/aliases.ts` to `./src/any.ts`.
 -   `AnyObj<T = unknown>` from `./src/any/obj.ts` to `./src/any/obj.ts`.
@@ -329,7 +329,7 @@
 
 &nbsp;
 
-# [1.2.2]
+## [1.2.2]
 
 -   No changelog for release.
 
