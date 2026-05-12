@@ -7,7 +7,7 @@ module.exports = {
 	pretty: true,
 	includeVersion: true,
 	sort: 'alphabetical',
-	githubPages: false,
+	githubPages: true,
 	categorizeByGroup: true,
 	cleanOutputDir: true
 };
