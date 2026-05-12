@@ -2,6 +2,7 @@
 	"name": "@toreda/shared-types",
 	"version": "3.0.0",
 	"public": true,
+	"packageManager": "pnpm@10.11.1",
 	"description": "Common mappings, aliases, and types used in Toreda TypeScript packages.",
 	"main": "./dist/index.js",
 	"typings": "./dist/index.d.ts",
