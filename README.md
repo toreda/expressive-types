@@ -1,21 +1,23 @@
 [![Toreda](https://content.toreda.com/logo/toreda-logo.png)](https://www.toreda.com)
 
-[![CI](https://img.shields.io/github/workflow/status/toreda/expressive-types/CI?style=for-the-badge)](https://github.com/toreda/expressive-types/actions)
+[![CI](https://img.shields.io/github/workflow/status/toreda/shared-types/CI?style=for-the-badge)](https://github.com/toreda/shared-types/actions)
 
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/toreda/expressive-types/master?style=for-the-badge)](https://github.com/toreda/expressive-types/releases/latest) [![GitHub Release Date](https://img.shields.io/github/release-date/toreda/expressive-types?style=for-the-badge)](https://github.com/toreda/expressive-types/releases/latest) [![GitHub issues](https://img.shields.io/github/issues/toreda/expressive-types?style=for-the-badge)](https://github.com/toreda/expressive-types/issues)
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/toreda/shared-types/master?style=for-the-badge)](https://github.com/toreda/shared-types/releases/latest) [![GitHub Release Date](https://img.shields.io/github/release-date/toreda/shared-types?style=for-the-badge)](https://github.com/toreda/shared-types/releases/latest) [![GitHub issues](https://img.shields.io/github/issues/toreda/shared-types?style=for-the-badge)](https://github.com/toreda/shared-types/issues)
 
- [![license](https://img.shields.io/github/license/toreda/expressive-types?style=for-the-badge)](https://github.com/toreda/expressive-types/blob/master/LICENSE)
+ [![license](https://img.shields.io/github/license/toreda/shared-types?style=for-the-badge)](https://github.com/toreda/shared-types/blob/master/LICENSE)
 
 &nbsp;
 
-# `@toreda/expressive-types`
+# `@toreda/shared-types`
+
+Common types.
 
 Improve readability, reduce redundancy. Functional &amp; Expressive Types used in [**Toreda**](https://www.toreda.com) packages.
 
 &nbsp;
 
 # **Contents**
-- [`@toreda/expressive-types`](#toredaexpressive-types)
+- [`@toreda/shared-types`](#toredashared-types)
 - [**Contents**](#contents)
 - [Object API](#object-api)
 	- [`Resettable`](#resettable)
@@ -53,7 +55,7 @@ Interface indicating implementer provides a `reset` method.
 
 ### Example
 ```typescript
-import type {Resettable} from '@toreda/expressive-types';
+import type {Resettable} from '@toreda/shared-types';
 
 class MyObj implements Resettable {
 	public reset(): void {
@@ -70,7 +72,7 @@ Interface indicating implementer provides a `clear()` method. Callers expect `tr
 
 ### Example
 ```typescript
-import type {Clearable} from '@toreda/expressive-types';
+import type {Clearable} from '@toreda/shared-types';
 
 class MyObj implements Clearable {
 	public clear(): boolean {
@@ -90,7 +92,7 @@ Interface indicating implementer provides a `toString()` method which returns th
 
 ### Example
 ```typescript
-import type {Stringable} from '@toreda/expressive-types';
+import type {Stringable} from '@toreda/shared-types';
 
 class MyObj implements Stringable {
 	public a: string;
@@ -139,7 +141,7 @@ Implementer's type is any JavaScript primitive.
 
 ### Import
 ```typescript
-import {Primitive} from '@toreda/expressive-types'
+import {Primitive} from '@toreda/shared-types'
 ```
 
 ### Use
@@ -153,7 +155,7 @@ Implementer's contents can be converted to a string by calling `toString()`.
 
 ### **Import**
 ```typescript
-import {Stringable} from '@toreda/expressive-types'
+import {Stringable} from '@toreda/shared-types'
 ```
 
 ### **Use**
@@ -182,7 +184,7 @@ Express value intent &amp; purpose with type definitions.
 
 ### **Import**
 ```typescript
-import {BitMask} from '@toreda/expressive-types'
+import {BitMask} from '@toreda/shared-types'
 ```
 
 ### **Use**
@@ -221,13 +223,13 @@ function validateId(id: BigId): void {
 
 ## Yarn
 ```bash
-$ yarn add @toreda/expressive-types --dev
+$ yarn add @toreda/shared-types --dev
 ```
 
 
 ## NPM
 ```bash
-$ yarn add @toreda/expressive-types --D
+$ yarn add @toreda/shared-types --D
 ```
 
 &nbsp;

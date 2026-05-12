@@ -1,4 +1,5 @@
 import esbuild from 'esbuild';
+import {dtsPlugin} from 'esbuild-plugin-d.ts';
 
 (async () => {
 	console.info(`Running ESBuild..`);
@@ -7,6 +8,7 @@ import esbuild from 'esbuild';
 		bundle: false,
 		outdir: './dist',
 		platform: 'node',
-		entryPoints: ['./src/**/*']
+		entryPoints: ['./src/**/*'],
+		plugins: [dtsPlugin()]
 	});
 })();

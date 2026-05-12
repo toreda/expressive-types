@@ -1,6 +1,6 @@
 {
 	"exclude": ["node_modules", "dist"],
-	"include": ["./src/**/*", "**/gulpfile.ts", "**/esbuild.ts"],
+	"include": ["./src/**/*", "**/esbuild.ts"],
 	"filesGlob": ["./src/*.ts", "./src/**/*.ts", "!./node_modules/**"],
 	"compilerOptions": {
 		"allowImportingTsExtensions": true,

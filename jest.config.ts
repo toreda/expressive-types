@@ -6,7 +6,6 @@ module.exports = {
 		'node_modules/',
 		'.node/',
 		'jest/',
-		'gulpfile.ts',
 		'coverage/',
 		'webpack.config.ts',
 		'.github',

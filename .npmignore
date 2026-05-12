@@ -6,7 +6,6 @@
 coverage
 demo
 examples
-gulpfile.ts
 jest.config.js
 node_modules
 src/
