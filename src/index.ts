@@ -115,6 +115,8 @@ export type {Terabytes} from './terabytes';
 export type {Terameters} from './terameters';
 export type {Teslas} from './teslas';
 export type {TypeMap} from './type/map';
+export {typeValue} from './type/value';
+export type {TypeValueTest} from './type/value/test';
 export type {ValidatorFn} from './validator/fn';
 export type {Visitor} from './visitor';
 export type {Volts} from './volts';

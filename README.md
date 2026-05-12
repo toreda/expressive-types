@@ -1,8 +1,8 @@
 [![Toreda](https://content.toreda.com/logo/toreda-logo.png)](https://www.toreda.com)
 
-[![CI](https://img.shields.io/github/workflow/status/toreda/shared-types/CI?style=for-the-badge)](https://github.com/toreda/shared-types/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/toreda/shared-types/ci.yml?branch=master&style=for-the-badge)](https://github.com/toreda/shared-types/actions/workflows/ci.yml) [![GitHub issues](https://img.shields.io/github/issues/toreda/shared-types?style=for-the-badge)](https://github.com/toreda/shared-types/issues)
 
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/toreda/shared-types/master?style=for-the-badge)](https://github.com/toreda/shared-types/releases/latest) [![GitHub Release Date](https://img.shields.io/github/release-date/toreda/shared-types?style=for-the-badge)](https://github.com/toreda/shared-types/releases/latest) [![GitHub issues](https://img.shields.io/github/issues/toreda/shared-types?style=for-the-badge)](https://github.com/toreda/shared-types/issues)
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/toreda/shared-types/master?style=for-the-badge)](https://github.com/toreda/shared-types/releases/latest) [![GitHub Release Date](https://img.shields.io/github/release-date/toreda/shared-types?style=for-the-badge)](https://github.com/toreda/shared-types/releases/latest) 
 
  [![license](https://img.shields.io/github/license/toreda/shared-types?style=for-the-badge)](https://github.com/toreda/shared-types/blob/master/LICENSE)
 
@@ -10,9 +10,7 @@
 
 # `@toreda/shared-types`
 
-Common types.
-
-Improve readability, reduce redundancy. Functional &amp; Expressive Types used in [**Toreda**](https://www.toreda.com) packages.
+Common shared types and expressive aliases for TypeScript packages.
 
 &nbsp;
 
@@ -38,9 +36,6 @@ Improve readability, reduce redundancy. Functional &amp; Expressive Types used i
 	- [**`BitMask`**](#bitmask)
 		- [**Import**](#import-2)
 		- [**Use**](#use-2)
-- [Install](#install)
-	- [Yarn](#yarn)
-	- [NPM](#npm)
 - [Legal](#legal)
 	- [License](#license)
 	- [Copyright](#copyright)
@@ -217,20 +212,6 @@ function validateId(id: BigId): void {
 }
 ```
 
-&nbsp;
-
-# Install
-
-## Yarn
-```bash
-$ yarn add @toreda/shared-types --dev
-```
-
-
-## NPM
-```bash
-$ yarn add @toreda/shared-types --D
-```
 
 &nbsp;
 # Legal
