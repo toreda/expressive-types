@@ -40,5 +40,5 @@ export type Guarded<T extends PrimitiveOrConstructor> = T extends {
 }
 	? U
 	: T extends keyof TypeMap
-	? TypeMap[T]
-	: never;
+		? TypeMap[T]
+		: never;

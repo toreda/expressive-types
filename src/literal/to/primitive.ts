@@ -31,7 +31,7 @@
 export type LiteralToPrimitive<SubOption> = SubOption extends boolean
 	? boolean
 	: SubOption extends number
-	? number
-	: SubOption extends string
-	? string
-	: SubOption;
+		? number
+		: SubOption extends string
+			? string
+			: SubOption;

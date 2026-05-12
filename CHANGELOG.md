@@ -1,5 +1,43 @@
 ## [Unreleased]
 
+## [3.0.0] - 2026-05-12
+
+### Breaking Changes
+
+-   Package renamed from `@toreda/types` to `@toreda/shared-types`. Consumers must update their imports and `package.json` dependency entries.
+
+### Added
+-   `LogLike` interface and `logLike()` structural type guard describing the minimal shape (`error`, `warn`, `info`, `debug`, `trace`) satisfied by both the global `console` and `@toreda/log`'s `Log`. Lets internals depend on a logger without coupling to any specific implementation.
+-   `Hashable` interface for objects that expose a stable hash representation.
+-   `Storable`, `StorableObject`, `StorablePrimitive`, and `StorableValue` types describing values compatible with Toreda storage APIs.
+-   `Closeable` and `CloseableOutcome` for objects offering `.close()` with a typed result.
+-   `Cleanable` for objects offering `.clean()` semantics distinct from `Clearable` / `Resettable`.
+-   `Runnable` class, `RunnableOutcome`, `RunnableTask`, and `RunnableTaskSync` formalized as exports.
+-   `Defaults` helper export.
+-   `Tag` and `ValidatorFn` types.
+-   `Visitor` and `Iterable` re-confirmed in index exports.
+-   Additional unit types: `Celsius`, `Liters`, `Lumens`, `Pascals`, `Volts`, `Watts`, `RSI`, `GB`, `KB`, `MB`, `TB`, `Kbps`, `KBps`.
+-   Many previously-defined types added to `src/index.ts` that were missing from the public re-exports.
+
+### Changed
+
+-   Package manager switched from `yarn` to `pnpm`; `yarn.lock` removed in favor of `pnpm-lock.yaml`.
+-   Build pipeline now uses gulp as the orchestrator (clean → lint → compile) with `esbuild` doing the actual compile and `.d.ts` emission. The `cleanDist` step deletes `dist/**` before every build.
+-   Lint inside the build is gated on the `BUILD_LINT` env var (default: on). Set `BUILD_LINT=false` to skip; `pnpm build:nolint` is a convenience wrapper that uses `cross-env` to do this cross-platform.
+-   Test runner now uses `@swc/jest` with a TypeScript Jest config (`jest.config.ts`) instead of `ts-jest`.
+-   GitHub Actions workflows replaced: legacy `main.yml` removed; new `ci.yml`, `prepare-release.yml`, and `release.yml` added. Release notes are now extracted directly from this changelog by `scripts/extract-changelog-section.mjs` and `scripts/prepare-changelog-release.mjs`.
+-   Copyright headers updated across the source tree (`2019 - 2026 Toreda, Inc.`).
+-   License year range refreshed.
+-   Module specifiers normalized to relative paths to avoid VSCode auto-import resolving to absolute paths.
+-   Internal `eslintrc` and `swcrc` configurations updated for the modern toolchain.
+-   `marked` resolution bumped; `glob-parent` resolution added for advisory remediation.
+
+### Removed
+
+-   Sonar configuration (`sonar-project.properties`).
+-   Dependency graph generation script and the committed graph image.
+-   Crypto type tree under `src/` (see Breaking Changes above).
+
 ## [2.16.0] - 2023-02-14
 -   Moved all `Lifecycle` related files into new `@toreda/lifecycle` NPM package project. `@toreda/types` is intended to include expressive types with minimal or no functions that need to be included in the final build. The lifecycle functionality is useful and needs to be expanded, thus has its own package now.
 
@@ -333,8 +371,12 @@
 
 -   No changelog for release.
 
-[unreleased]: https://github.com/toreda/types/releases/compare/v2.13.1...HEAD
-[2.13.1]: https://github.com/toreda/types/releases/compare/v2.13.0..v2.13.1
+[unreleased]: https://github.com/toreda/shared-types/releases/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/toreda/shared-types/releases/compare/v2.16.0...v3.0.0
+[2.16.0]: https://github.com/toreda/shared-types/releases/compare/v2.15.0...v2.16.0
+[2.15.0]: https://github.com/toreda/shared-types/releases/compare/v2.14.0...v2.15.0
+[2.14.0]: https://github.com/toreda/shared-types/releases/compare/v2.13.1...v2.14.0
+[2.13.1]: https://github.com/toreda/shared-types/releases/compare/v2.13.0..v2.13.1
 [2.13.0]: https://github.com/toreda/types/releases/compare/v2.10.1...v2.13.0
 [2.10.1]: https://github.com/toreda/types/releases/compare/v2.10.0...v2.10.1
 [2.10.0]: https://github.com/toreda/types/releases/compare/v2.8.0...v2.10.0

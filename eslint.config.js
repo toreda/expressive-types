@@ -23,13 +23,11 @@
  *
  */
 
-import type {Primitive} from '../primitive';
+const toredaConfig = require('@toreda/eslint-config');
 
-/**
- * @category Object API
- */
-export type DeepExpand<T> = T extends Primitive
-	? T
-	: T extends infer obj
-		? {[key in keyof obj]: DeepExpand<obj[key]>}
-		: never;
+module.exports = [
+	{
+		ignores: ['dist/**', 'node_modules/**', 'coverage/**', 'docs/**'],
+	},
+	...toredaConfig,
+];
